@@ -44,11 +44,13 @@ int main() {
     
     // Program for square
     
-    GLfloat points[] = {
+    GLfloat points1[] = {
         -0.5f, -0.5f, 0.0f,
         0.5f, -0.5f, 0.0f,
-        0.5f, 0.5f, 0.0f,
-        
+        0.5f, 0.5f, 0.0f
+    };
+    
+    GLfloat points2[] = {
         0.5f, 0.5f, 0.0f,
         -0.5f, 0.5f, 0.0f,
         -0.5f, -0.5f, 0.0f
@@ -65,19 +67,34 @@ int main() {
     "#version 410\n"
     "out vec4 frag_colour;"
     "void main () {"
-    "	frag_colour = vec4 (0.5, 0.0, 0.5, 1.0);"
+    "	frag_colour = vec4 (0.8, 0.3, 0.5, 1.0);"
     "}";
     
-    // VBO
-    GLuint vbo;
-    glGenBuffers(1, &vbo);
-    glBindBuffer(GL_ARRAY_BUFFER, vbo);
-    glBufferData(GL_ARRAY_BUFFER, 4 * sizeof(points), points, GL_STATIC_DRAW);
+    // VBO 1
+    GLuint vbo1;
+    glGenBuffers(1, &vbo1);
+    glBindBuffer(GL_ARRAY_BUFFER, vbo1);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(points1), points1, GL_STATIC_DRAW);
     
-    // VAO
-    GLuint vao;
-    glGenVertexArrays(1, &vao);
-    glBindVertexArray(vao);
+    // VBO 1
+    GLuint vbo2;
+    glGenBuffers(1, &vbo2);
+    glBindBuffer(GL_ARRAY_BUFFER, vbo2);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(points2), points2, GL_STATIC_DRAW);
+    
+    // VAO 1
+    GLuint vao1;
+    glGenVertexArrays(1, &vao1);
+    glBindVertexArray(vao1);
+    glBindBuffer(GL_ARRAY_BUFFER, vbo1);
+    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, NULL);
+    
+    // VAO 2
+    GLuint vao2;
+    glGenVertexArrays(1, &vao2);
+    glBindVertexArray(vao2);
+    glBindBuffer(GL_ARRAY_BUFFER, vbo2);
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, NULL);
     
@@ -104,7 +121,11 @@ int main() {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
         glUseProgram(shader_programme);
-        glBindVertexArray(vao);
+        
+        glBindVertexArray(vao1);
+        glDrawArrays(GL_TRIANGLES, 0, 6);
+        
+        glBindVertexArray(vao2);
         glDrawArrays(GL_TRIANGLES, 0, 6);
         
         glfwPollEvents();
