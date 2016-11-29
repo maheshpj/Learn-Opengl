@@ -1,5 +1,5 @@
 //
-//  basic_square.cpp
+//  squareOf2VBOs.cpp
 //  OpenGlLearn
 //
 
