@@ -8,6 +8,8 @@
 #include <stdio.h>
 #include <math.h>
 
+#define PI 3.14159265
+
 double prev_seconds;
 int frame_count;
 
@@ -23,10 +25,13 @@ GLfloat colors[] = {
     0.0f, 0.0f,	1.0f
 };
 
+double deg = 18.0;
+double rad = deg * PI / 180.0;
+
 float matrix[] = {
     1.0f, 0.0f, 0.0f, 0.0f,  // first column
-    0.0f, cos(90), sin(90), 0.0f,  // second column
-    0.0f, -sin(90), cos(90), 0.0f,  // third column
+    0.0f, cos(rad), sin(rad), 0.0f,  // second column
+    0.0f, -sin(rad), cos(rad), 0.0f,  // third column
     0.0f, 0.0f, 0.0f, 1.0f   // fourth column
 };
 
