@@ -45,7 +45,6 @@
 		1634EA461E01DCAE008C0A11 /* libglfw3.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1634EA0A1E01DA1A008C0A11 /* libglfw3.3.2.dylib */; };
 		1634EA471E01DCB0008C0A11 /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1634EA081E01DA07008C0A11 /* libGLEW.2.0.0.dylib */; };
 		1634EA481E01DCB2008C0A11 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1634E9C51E01D46B008C0A11 /* OpenGL.framework */; };
-		1634EA4B1E01DDD6008C0A11 /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1634EA491E01DDD6008C0A11 /* common.cpp */; settings = {ASSET_TAGS = (); }; };
 		1634EA541E01DF0F008C0A11 /* libinclude.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1634EA501E01DEEF008C0A11 /* libinclude.a */; };
 		1634EA551E01DF97008C0A11 /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1634EA491E01DDD6008C0A11 /* common.cpp */; };
 		1634EA561E01DF97008C0A11 /* common.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 1634EA4A1E01DDD6008C0A11 /* common.hpp */; };
@@ -60,8 +59,8 @@
 		1634EA5F1E01E0FC008C0A11 /* libinclude.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1634EA501E01DEEF008C0A11 /* libinclude.a */; };
 		1634EA601E01E0FF008C0A11 /* libinclude.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1634EA501E01DEEF008C0A11 /* libinclude.a */; };
 		1634EA611E01E104008C0A11 /* libinclude.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1634EA501E01DEEF008C0A11 /* libinclude.a */; };
-		1634EA641E01E328008C0A11 /* shader_program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1634EA621E01E328008C0A11 /* shader_program.cpp */; settings = {ASSET_TAGS = (); }; };
-		1634EA691E01E6B4008C0A11 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 1634EA681E01E6B4008C0A11 /* README.md */; settings = {ASSET_TAGS = (); }; };
+		16D99FE01E086E7500E56FB3 /* shader_program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1634EA621E01E328008C0A11 /* shader_program.cpp */; };
+		16D99FE11E086E7500E56FB3 /* shader_program.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 1634EA631E01E328008C0A11 /* shader_program.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -673,9 +672,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1634EA641E01E328008C0A11 /* shader_program.cpp in Sources */,
-				1634EA4B1E01DDD6008C0A11 /* common.cpp in Sources */,
-				1634EA691E01E6B4008C0A11 /* README.md in Sources */,
 				1634E9B11E01CDD2008C0A11 /* show_renderer_version.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -748,6 +744,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16D99FE01E086E7500E56FB3 /* shader_program.cpp in Sources */,
+				16D99FE11E086E7500E56FB3 /* shader_program.hpp in Sources */,
 				1634EA551E01DF97008C0A11 /* common.cpp in Sources */,
 				1634EA561E01DF97008C0A11 /* common.hpp in Sources */,
 				1634EA571E01DF97008C0A11 /* maths_funcs.cpp in Sources */,
@@ -1098,6 +1096,7 @@
 				1634E99F1E01CCC5008C0A11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1634E9D11E01D64E008C0A11 /* Build configuration list for PBXNativeTarget "BasicTriangle" */ = {
 			isa = XCConfigurationList;
@@ -1106,6 +1105,7 @@
 				1634E9D31E01D64E008C0A11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1634E9DF1E01D72C008C0A11 /* Build configuration list for PBXNativeTarget "BasicSquare" */ = {
 			isa = XCConfigurationList;
@@ -1114,6 +1114,7 @@
 				1634E9E11E01D72C008C0A11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1634E9EA1E01D74B008C0A11 /* Build configuration list for PBXNativeTarget "BasicRotate" */ = {
 			isa = XCConfigurationList;
@@ -1122,6 +1123,7 @@
 				1634E9EC1E01D74B008C0A11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1634E9F51E01D75C008C0A11 /* Build configuration list for PBXNativeTarget "BasicScale" */ = {
 			isa = XCConfigurationList;
@@ -1130,6 +1132,7 @@
 				1634E9F71E01D75C008C0A11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1634EA001E01D7A5008C0A11 /* Build configuration list for PBXNativeTarget "Translation" */ = {
 			isa = XCConfigurationList;
@@ -1138,6 +1141,7 @@
 				1634EA021E01D7A5008C0A11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1634EA241E01DC53008C0A11 /* Build configuration list for PBXNativeTarget "RotateZeroTo90" */ = {
 			isa = XCConfigurationList;
@@ -1146,6 +1150,7 @@
 				1634EA261E01DC53008C0A11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1634EA2F1E01DC66008C0A11 /* Build configuration list for PBXNativeTarget "SquareOf2VBOs" */ = {
 			isa = XCConfigurationList;
@@ -1154,6 +1159,7 @@
 				1634EA311E01DC66008C0A11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1634EA3A1E01DC7A008C0A11 /* Build configuration list for PBXNativeTarget "TranslationAnimate" */ = {
 			isa = XCConfigurationList;
@@ -1162,6 +1168,7 @@
 				1634EA3C1E01DC7A008C0A11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1634EA511E01DEEF008C0A11 /* Build configuration list for PBXNativeTarget "include" */ = {
 			isa = XCConfigurationList;
@@ -1170,6 +1177,7 @@
 				1634EA531E01DEEF008C0A11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
