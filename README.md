@@ -13,7 +13,7 @@ Learn OpenGL with C++
     >$brew install glfw3
 3.  Install GLEW
     >$brew install glew
-4.  Open LearnOpenGL xcode project and select main project
+4.  Open LearnOpenGL xcode project `/LearnOpenGL/LearnOpenGL.xcodeproj` and select main project
 5.  Select `Build Settings > Search Paths > Header Search Paths` click + button
 6.  Add `/usr/local/include`
 7.  Go to `Build Phases > Link BinaryWith Libraries` click + button
