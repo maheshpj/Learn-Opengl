@@ -7,6 +7,7 @@
 //
 
 #include "shader_program.hpp"
+#include "common.hpp"
 
 
 GLuint get_shader_program(char* vertex_shader, char* frag_shader) {
