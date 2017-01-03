@@ -14,8 +14,8 @@
 
 
 GLfloat points[] = {
-    0.0f,	0.5f, 0.0f,
-    0.5f,  -0.5f, 0.0f,
+    0.0f, 0.5f, 0.0f,
+    0.5f, -0.5f, 0.0f,
     -0.5f, -0.5f, 0.0f
 };
 
@@ -167,7 +167,7 @@ int main() {
             speed = -speed;
             usleep(1000000);
         }
-
+        
     }
     
     glfwTerminate();
