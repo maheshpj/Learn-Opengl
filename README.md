@@ -1,13 +1,18 @@
 # Learn OpenGL
 
-Learn OpenGL with C++
+Learn OpenGL
 
 ## OpenGL Setup
 
-### Setup video
+### Steps
+1.  Open LearnOpenGL xcode project `/LearnOpenGL/LearnOpenGL.xcodeproj`
+2.  To run any example, select the appropriate target e.g. `BasicTriangle` and click Run
+
+### Advance Setup Steps
+To use latest GLFW and GLEW libs (other than in lib folder) use below steps
+
 [OpenGL 3.0+ setup GLFW and GLEW on a Mac](https://www.youtube.com/watch?v=Tz0dq2krCW8&t=334s)
 
-### Steps
 1.  Install [HomeBrew - package manager for macOS](http://brew.sh/)
 2.  Install GLFW3
     >$brew install glfw3
