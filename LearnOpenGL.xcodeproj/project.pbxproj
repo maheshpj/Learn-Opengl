@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160B81271E1D41B000E1C165 /* libglfw3.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 169922FB1E1C21AD0015CEDC /* libglfw3.3.2.dylib */; };
+		160B81281E1D41B300E1C165 /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 169922F91E1C21A90015CEDC /* libGLEW.2.0.0.dylib */; };
 		1634E9B11E01CDD2008C0A11 /* show_renderer_version.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1634E9A81E01CDD2008C0A11 /* show_renderer_version.cpp */; settings = {ASSET_TAGS = (); }; };
 		1634E9C61E01D46B008C0A11 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1634E9C51E01D46B008C0A11 /* OpenGL.framework */; };
-		1634E9C81E01D4A7008C0A11 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1634E9C71E01D4A7008C0A11 /* GLKit.framework */; };
 		1634E9D41E01D676008C0A11 /* basic_triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1634E9A31E01CDD2008C0A11 /* basic_triangle.cpp */; };
 		1634E9D51E01D6C8008C0A11 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1634E9C51E01D46B008C0A11 /* OpenGL.framework */; };
 		1634EA041E01D820008C0A11 /* basic_square.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1634E9A21E01CDD2008C0A11 /* basic_square.cpp */; };
@@ -183,8 +184,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1634E9C81E01D4A7008C0A11 /* GLKit.framework in Frameworks */,
 				1634E9C61E01D46B008C0A11 /* OpenGL.framework in Frameworks */,
+				160B81271E1D41B000E1C165 /* libglfw3.3.2.dylib in Frameworks */,
+				160B81281E1D41B300E1C165 /* libGLEW.2.0.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -838,6 +840,7 @@
 					"$(inherited)",
 					/usr/local/Cellar/glew/2.0.0/lib,
 					/usr/local/Cellar/glfw3/3.2.1/lib,
+					"$(PROJECT_DIR)/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -850,6 +853,7 @@
 					"$(inherited)",
 					/usr/local/Cellar/glew/2.0.0/lib,
 					/usr/local/Cellar/glfw3/3.2.1/lib,
+					"$(PROJECT_DIR)/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
