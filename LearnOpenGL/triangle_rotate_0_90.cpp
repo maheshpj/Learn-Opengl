@@ -14,9 +14,9 @@
 
 
 GLfloat points[] = {
-    0.0f,	0.5f,	0.0f,
-    0.5f, -0.5f,	0.0f,
-    -0.5f, -0.5f,	0.0f
+    0.0f, 0.5f, 0.0f,
+    0.5f, -0.5f, 0.0f,
+    -0.5f, -0.5f, 0.0f
 };
 
 GLfloat colors[] = {
@@ -80,9 +80,10 @@ GLuint _get_shader_program() {
     return shader_programme;
 }
 
-void _show_rotation_angle(GLFWwindow* window, float angle) {
+void _show_rotation_angle(GLFWwindow* window, double angle) {
     char tmp[128];
-    sprintf(tmp, "Rotation Angle: %.0f", angle);
+    double degree = angle * 180.0f / PI;
+    sprintf(tmp, "Rotation Angle: %.0f", degree);
     glfwSetWindowTitle(window, tmp);
 }
 
@@ -132,28 +133,19 @@ int main() {
     glClearColor(0.6f, 0.6f, 0.8f, 1.0f);
     
     // rotate at 1 unit per second
-    float speed = -1.0f;
-    double deg = 0.0f;
-    double rad = deg * PI / 180.0f;
+    double speed = 0.157f;
+    double radian = 0.0f;
     
     while (!glfwWindowShouldClose(window)) {
-        // when triangle is at 0 or 90 degrees
-        // change the direction and wait for some time
-        if(deg == 0.0f || deg == 90.0f) {
-            speed = -speed;
-            usleep(1000000);
-        }
-        deg = deg + speed;
-        rad = deg * PI / 180.0;
+        radian += speed;
         
         // update the matrix
-        matrix[5] = cos(rad);
-        matrix[6] = sin(rad);
-        matrix[9] = -sin(rad);
-        matrix[10] = cos(rad);
+        matrix[5] = cos(radian);
+        matrix[6] = sin(radian);
+        matrix[9] = -sin(radian);
+        matrix[10] = cos(radian);
         
-        //update_fps_counter(window);
-        _show_rotation_angle(window, deg);
+        _show_rotation_angle(window, radian);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
         glUseProgram(shader_programme);
@@ -168,6 +160,14 @@ int main() {
         if(GLFW_PRESS == glfwGetKey(window, GLFW_KEY_ESCAPE)) {
             glfwSetWindowShouldClose(window, 1);
         }
+        
+        // when triangle is at 0 or 90 degrees/1.57 radian
+        // change the direction and wait for some time
+        if(radian <= 0.0f || radian >= 1.57f) {
+            speed = -speed;
+            usleep(1000000);
+        }
+        
     }
     
     glfwTerminate();
